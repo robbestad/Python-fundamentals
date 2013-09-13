@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="generator" content="HTML Tidy for HTML5 (experimental) for Mac OS X https://github.com/w3c/tidy-html5/tree/c63cc39">
+        <title>
+            Learn to Program: The Fundamentals // Assignment 2
+        </title>
+    </head>
+    <body>
+        <h1>
+            Learn to Program: The Fundamentals // Assignment 2
+        </h1>
+        <h2>
+            Preface
+        </h2>
+        <h3>
+            Required Preparation
+        </h3>
+        <p>
+            This handout assumes that you have watched all the week 4 videos and also done the week 4 exercise. If you read this handout before you've done all of that, please come back and re-read it after you've passed the week 4 exercise.
+        </p>
+        <h3>
+            A2 Problem Domain: Deoxyribonucleic Acid (DNA)
+        </h3>
+        <p>
+            The problem domain for A2 is <a href="http://en.wikipedia.org/wiki/Dna">Deoxyribonucleic Acid (DNA)</a>, the double-stranded molecule that encodes genetic information for living organisms. DNA is made up of four kinds of <em>nucleotides</em>, which are molecules that bond together to form DNA sequences.
+        </p>
+        <p>
+            The four nucleotides are adenine (A), guanine (G), cytosine (C), and thymine (T). Each strand of DNA is a sequence of nucleotides, for example AGCTAC. In a program, we will use a string representation of this, <code>"AGCTAC"</code>.
+        </p>
+        <p>
+            DNA has 2 strands in a double helix. The nucleotides in one strand are bonded to the nucleotides in the other strand. A and T can be bonded together, and thus <em>complement</em> each other; similarly, C and G are complements of each other.
+        </p>
+        <p>
+            You can see a picture of this on <a href="http://en.wikipedia.org/wiki/Dna">the Wikipedia page for DNA</a>. The two strands in DNA are <em>complementary</em> because each nucleotide in one strand is bonded with its complement in the other strand. Thus, given the DNA sequence ACGTACG, its complementary strand is TGCATGC.
+        </p>
+        <h3>
+            Terminology in this handout
+        </h3>
+        <p>
+            A <em>DNA sequence</em> is a sequence of nucleotides, such as TCATGT.
+        </p>
+        <hr>
+        <h2 id="whattodo">
+            What to do
+        </h2>
+        <h3>
+            Step 1: Download the starter code
+        </h3>
+        <p>
+            In this assignment, we are providing <em>starter code</em> that contains some function headers and docstrings.
+        </p>
+        <p>
+            Download the starter code: <a href="http://spark-public.s3.amazonaws.com/programming1/a2/a2.py">a2.py</a>.
+        </p>
+        <hr>
+        <h3>
+            Step 2: Write functions <code>get_length</code>, <code>is_longer</code>, <code>count_nucleotides</code>, and <code>contains_sequence</code>. (Be sure to test your code with empty strings where appropriate.)
+        </h3>
+        <p>
+            For these functions, you may use built-in functions, <code>str</code> operations (for example: <code>in</code>, <code>+</code>, indexing), and <code>str</code> methods.
+        </p>
+        <table width="100%" border="1" cellpadding="2" cellspacing="0" summary="">
+            <!-- col width="67*" /> <col width="189*" / -->
+            <tr>
+                <th style="width:25%">
+                    Function name:<br>
+                    (Parameter types) -&gt; Return type
+                </th>
+                <th style="width:75%">
+                    Description
+                </th>
+            </tr>
+            <tr>
+                <td style="width:20%">
+                    <code>get_length:</code><br>
+                    <code>(str) -&gt; int</code>
+                </td>
+                <td style="width:80%">
+                    The parameter is a DNA sequence. Return the length of that sequence.
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%">
+                    <code>is_longer:</code><br>
+                    <code>(str, str) -&gt; bool</code>
+                </td>
+                <td style="width:80%">
+                    The two parameters are DNA sequences. Return <code>True</code> if and only if the first DNA sequence is longer than the second DNA sequence. (If they are the same length, return <code>False</code>.)
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%">
+                    <code>count_nucleotides:</code><br>
+                    <code>(str, str) -&gt; int</code>
+                </td>
+                <td style="width:80%">
+                    The first parameter is a DNA sequence and the second parameter is a nucleotide (<code>'A'</code>, <code>'T'</code>, <code>'C'</code> or <code>'G'</code>). Return the number of times the nucleotide occurs in the DNA sequence.
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%">
+                    <code>contains_sequence:</code><br>
+                    <code>(str, str) -&gt; bool</code>
+                </td>
+                <td style="width:80%">
+                    The two parameters are DNA sequences. Return <code>True</code> if and only if the first DNA sequence contains the second DNA sequence.
+                </td>
+            </tr>
+        </table>
+        <p>
+            Once you have finished writing these functions, in IDLE, choose Run -&gt; Run Module. In the shell, test each function by running some example function calls. You can also submit your assignment at this point to see whether you're on the right track: remember, you can submit once every hour up until the deadline. If the example calls return the expected results and you pass all the tests when you submit, move on to Step 3. Otherwise, modify your code and repeat the tests.
+        </p>
+        <hr>
+        <h3>
+            Step 3: Write functions <code>is_valid_sequence</code> and <code>insert_sequence</code>.
+        </h3>
+        <p>
+            There is no starter code for these functions. Use the design recipe to complete them. We have given you some suggestions for examples to try, but you should come up with more on your own based on the descriptions.
+        </p>
+        <p>
+            For these functions, you may use built-in functions and <code>str</code> operations (for example: <code>in</code>, <code>+</code>, indexing).
+        </p>
+        <h4>
+            <font color='red'><b>Do not use <code>str</code> methods.</b></font>
+        </h4>
+        <table width="100%" border="1" cellpadding="2" cellspacing="0" summary="">
+            <!-- col width="67*" /> <col width="189*" / -->
+            <tr>
+                <th style="width:25%">
+                    Function name:<br>
+                    (Parameter types) -&gt; Return type
+                </th>
+                <th style="width:75%">
+                    Description
+                </th>
+            </tr>
+            <tr>
+                <td style="width:20%">
+                    <code>is_valid_sequence:</code><br>
+                    <code>(str) -&gt; bool</code>
+                </td>
+                <td style="width:80%">
+                    The parameter is a potential DNA sequence. Return <code>True</code> if and only if the DNA sequence is valid (that is, it contains no characters other than <code>'A'</code>, <code>'T'</code>, <code>'C'</code> and <code>'G'</code>).<br>
+                    There are at least 2 ways to approach this. One way is to count the number of characters that are not nucleotides and then at the end check whether there were more than zero. Another way is to use a Boolean variable that represents whether you have found a non-nucleotide character; it would start off as <code>True</code> and would be set to <code>False</code> if you found something that wasn't an <code>'A'</code>, <code>'T'</code>, <code>'C'</code> or <code>'G'</code>.<br>
+                    You should construct examples that contain only <code>'A'</code>s, <code>'T'</code>s, <code>'C'</code>s and <code>'G'</code>s, and you should also create examples that contain other characters. A string is not a valid DNA sequence if it contains lowercase letters.
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%">
+                    <code>insert_sequence:</code><br>
+                    <code>(str, str, int) -&gt; str</code>
+                </td>
+                <td style="width:80%">
+                    The first two parameters are DNA sequences and the third parameter is an index. Return the DNA sequence obtained by inserting the second DNA sequence into the first DNA sequence at the given index. (You can assume that the index is valid.)<br>
+                    For example, If you call this function with arguments <code>'CCGG'</code>, <code>'AT'</code>, and <code>2</code>, then it should return <code>'CCATGG'</code>.<br>
+                    When coming up with more examples, think about where the second DNA sequence might be inserted: what are the extremes?
+                </td>
+            </tr>
+        </table>
+        <p>
+            Once you have finished writing these functions, in IDLE, choose Run -&gt; Run Module. In the shell, test your function by running some example function calls. You can also submit your assignment to see whether you're on the right track: remember, you can submit once every hour up until the deadline. If the example calls return the expected results and you pass all the tests when you submit, move on to Step 4. Otherwise, modify your code and repeat the tests.
+        </p>
+        <hr>
+        <h3>
+            Step 4: Write functions <code>get_complement</code> and <code>get_complementary_sequence</code>.
+        </h3>
+        <p>
+            There is no starter code for these functions. Use the design recipe to complete them. We have given you some suggestions for examples to try, but you should come up with more on your own based on the descriptions.
+        </p>
+        <p>
+            For these functions, you may use built-in functions and <code>str</code> operations (for example: <code>in</code>, <code>+</code>, indexing).
+        </p>
+        <h4>
+            <font color='red'><b>Do not use <code>str</code> methods.</b></font>
+        </h4>
+        <table width="100%" border="1" cellpadding="2" cellspacing="0" summary="">
+            <!-- col width="67*" /> <col width="189*" / -->
+            <tr>
+                <th style="width:25%">
+                    Function name:<br>
+                    (Parameter types) -&gt; Return type
+                </th>
+                <th style="width:75%">
+                    Description
+                </th>
+            </tr>
+            <tr>
+                <td style="width:20%">
+                    <code>get_complement:</code><br>
+                    <code>(str) -&gt; str</code>
+                </td>
+                <td style="width:80%">
+                    The first parameter is a nucleotide (<code>'A'</code>, <code>'T'</code>, <code>'C'</code> or <code>'G'</code>). Return the nucleotide's complement.<br>
+                    We have intentionally not given you any examples for this function. The Problem Domain section explains what a nucleotide is and what a complement is.
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%">
+                    <code>get_complementary_sequence:</code><br>
+                    <code>(str) -&gt; str</code>
+                </td>
+                <td style="width:80%">
+                    The parameter is a DNA sequence. Return the DNA sequence that is complementary to the given DNA sequence.<br>
+                    For exmaple, if you call this function with <code>'AT'</code> as the argument, it should return <code>'TA'</code>.
+                </td>
+            </tr>
+        </table>
+        <p>
+            Once you have finished writing these functions, in IDLE, choose Run -&gt; Run Module. In the shell, test your function by running some example function calls. You can also submit your assignment to see whether you're on the right track: remember, you can submit once every hour up until the deadline. If the example calls return the expected results and you pass all the tests when you submit, move on to Step 4. Otherwise, modify your code and repeat the tests.
+        </p>
+        <hr>
+        <h3>
+            Step 5: Submit your work
+        </h3>
+        <p>
+            Go to the Assignments page and click the appropriate Submit button. Choose your completed <b>a2.py</b> file. It should be marked within a few minutes. You can view your results by clicking on the View button in the Feedback column.
+        </p>
+        <p>
+            You can submit <b>a2.py</b> once every hour. Notice that this means that you can submit a lot of times before the due date if you start early. You can even submit before you've finished all of the functions. We will take the highest score out of all of your submissions.
+        </p>
+    </body>
+</html>
