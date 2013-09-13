@@ -70,3 +70,57 @@ def contains_sequence(dna1, dna2):
         return True
 
     return False
+
+def is_valid_sequence(dna):
+    """ (str) -> bool
+
+    The parameter is a potential DNA sequence. Return True if and only
+    if the DNA sequence is valid (that is, it contains no characters
+    other than 'A', 'T', 'C' and 'G').
+    There are at least 2 ways to approach this. One way is to count
+    the number of characters that are not nucleotides and then at the
+    end check whether there were more than zero. Another way is to use
+    a Boolean variable that represents whether you have found a
+    non-nucleotide character; it would start off as True and would be
+    set to False if you found something that wasn't an 'A', 'T', 'C'
+    or 'G'.
+    You should construct examples that contain only 'A's, 'T's, 'C's
+    and 'G's, and you should also create examples that contain other
+    characters. A string is not a valid DNA sequence if it contains
+    lowercase letters.
+
+    is_valid_sequence("ATCG")
+    True
+    is_valid_sequence("ATHY")
+    False
+    """
+
+    is_valid=True
+    valid_string="ATCG"
+
+    for char in dna:
+        if char not in valid_string:
+            return False
+            
+    return is_valid
+
+def insert_sequence(dna1, dna2, index):
+    """ (str, str, int) -> str
+
+    The first two parameters are DNA sequences and the third parameter is
+    an index. Return the DNA sequence obtained by inserting the second
+    DNA sequence into the first DNA sequence at the given index. (You
+    can assume that the index is valid.)
+    For example, If you call this function with arguments 'CCGG', 'AT',
+    and 2, then it should return 'CCATGG'.
+    When coming up with more examples, think about where the second DNA
+    sequence might be inserted: what are the extremes?
+
+    insert_sequence("CCGG", "AT", 2)
+    'CCATGG'
+    """
+
+    return dna1[0:index]+dna2+dna1[index:get_length(dna1)]
+
+
+    
