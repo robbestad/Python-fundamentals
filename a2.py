@@ -8,6 +8,15 @@ def get_length(dna):
     >>> get_length('ATCG')
     4
     """
+    chars=0
+    for char in dna:
+        chars = chars + 1
+    return chars
+
+    """ this is quicker, but the above code
+    is consistent with what we've been going through
+    in the lectures
+    return len(dna) """
 
 
 def is_longer(dna1, dna2):
