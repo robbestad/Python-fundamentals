@@ -122,5 +122,68 @@ def insert_sequence(dna1, dna2, index):
 
     return dna1[0:index]+dna2+dna1[index:get_length(dna1)]
 
+def get_complement(nucleotide):
+    """(str) -> str
+
+    The first parameter is a nucleotide ('A', 'T', 'C' or 'G'). Return
+    the nucleotide's complement.
+    We have intentionally not given you any examples for this function.
+    The Problem Domain section explains what a nucleotide is and what a
+    complement is.
+    A and T can be bonded together, and thus complement each other;
+    similarly, C and G are complements of each other.
+
+    get_complement("A")
+    'T'
+
+    get_complement("C")
+    'G'
+
+    get_complement("G")
+    'C'
+    """
+    out=""
+    if not is_valid_sequence(nucleotide):
+        return False
+    if not get_length(nucleotide) == 1:
+        return False
+    
+    for char in nucleotide:
+        if char in "A":
+            out = out + "T"
+        if char in "T":
+            out = out + "A"
+        if char in "G":
+            out = out + "C"
+        if char in "C":
+            out = out + "G"
+
+    return out
+
+def get_complementary_sequence(dna):
+    """(str) -> str
+
+    The parameter is a DNA sequence. Return the DNA sequence that is
+    complementary to the given DNA sequence.
+    For example, if you call this function with 'AT' as the argument,
+    it should return 'TA'.
+
+    get_complementary_sequence("AT")
+    'TA'
+
+    get_complementary_sequence("CG")
+    'GC'
+
+    get_complementary_sequence("ACGT")
+    'TGCA'
+    """
+    out=""
+    if not is_valid_sequence(dna):
+        return False
+    
+    for char in dna:
+        out = out + get_complement(char)
+
+    return out
 
     
