@@ -13,10 +13,13 @@ def get_length(dna):
         chars = chars + 1
     return chars
 
-    """ this is quicker, but the above code
-    is consistent with what we've been going through
+    """
+    The for loop above is consistent with what we've been going through
     in the lectures
-    return len(dna) """
+
+    This is quicker though:
+    return len(dna) 
+    """
 
 
 def is_longer(dna1, dna2):
@@ -30,6 +33,7 @@ def is_longer(dna1, dna2):
     >>> is_longer('ATCG', 'ATCGGA')
     False
     """
+    return(get_length(dna1)>get_length(dna2))
 
 
 def count_nucleotides(dna, nucleotide):
@@ -42,6 +46,12 @@ def count_nucleotides(dna, nucleotide):
     >>> count_nucleotides('ATCTA', 'G')
     0
     """
+    chars=0
+    for char in dna:
+        if char in nucleotide:
+            chars=chars + 1
+
+    return chars
 
 
 def contains_sequence(dna1, dna2):
@@ -56,3 +66,7 @@ def contains_sequence(dna1, dna2):
     False
 
     """
+    if dna1.find(dna2) > 0:
+        return True
+
+    return False
