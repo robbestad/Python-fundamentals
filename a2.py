@@ -187,3 +187,6 @@ def get_complementary_sequence(dna):
     return out
 
     
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
