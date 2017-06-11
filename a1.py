@@ -76,37 +76,30 @@ def to_24_hour_clock(hours):
     """
     return hours % 24
 
-
-
-
-
-### Write your get_hours function definition here:
-
 def get_hours(seconds):
     """(int) -> int
     Return the number of hours that have elapsed since midnight, as seen on a 24-hour clock
-    >>>get_hours(3800)
+
+    >>> get_hours(3800)
     1
     """
     return seconds // 3600
 
-### Write your get_minutes function definition here:
 
 def get_minutes(seconds):
     """ (int) -> int
     return the number of minutes that hava elapsed since midnight as seen on a clock
-    >>>get_minutes(3800)
+
+    >>> get_minutes(3800)
     3
     """
     return (seconds // 60) % 60
 
-
-### Write your get_seconds function definition here:
-
 def get_seconds(seconds):
     """ (int) -> int
     return the number of minutes that have elapsed since midnight as seen on a clock
-    >>>get_seconds(3800)
+
+    >>> get_seconds(3800)
     20"""
     return seconds %60
 
@@ -159,5 +152,7 @@ def time_from_utc(utc_offset, time):
     """
     return (time+utc_offset)% 24
 
-
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
 
